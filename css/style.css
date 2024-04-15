@@ -1,0 +1,424 @@
+@font-face {
+  font-family: nav-subheading;
+  src: url('calibri.ttf');
+}
+
+@font-face {
+  font-family: body-text;
+  src: url('calibri.ttf');
+}
+
+@font-face {
+  font-family: heading;
+  src: url('calibri.ttf');
+}
+
+
+:root {
+ --light-color: rgb(229, 224, 227);
+  --font-ratio: 1.2;
+  --main-heading: calc(2rem * var(--font-ratio));
+  --secondary-heading: calc(1.5rem * var(--font-ratio));
+  --sub-heading: calc(1.25rem * var(--font-ratio));
+  --nav-text: calc(1rem * var(--font-ratio));
+  --desc-text: calc(0.8rem * var(--font-ratio));
+  --body-text: calc(1rem * var(--font-ratio));
+  --nav: "nav-subheading"; 
+  --body: "body-text";
+  --heading:"heading";
+}
+
+
+body {
+  background: url(../images/Rectangle\ 50.jpg) no-repeat;
+  background-position: top center;
+  background-attachment: fixed;
+  background-size: cover;
+  contain: content; 
+}
+
+.container {
+  background-position: top center;
+  background-attachment: fixed;
+  padding: 0px, 100px;
+  background-size: cover;
+  contain: content;
+}
+
+.search-container{
+  width: 470px;
+  display: block;
+  margin: 5px auto;
+  margin-right: 100px;
+  
+}
+html {
+	width: 100%;
+  font: 'calibri';
+  font-weight: 150;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+	width: 100%;
+	margin: 0;
+}
+
+.logo-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-80%);
+  width: 100px;
+  range: center;
+}
+.logo-container img {
+  max-width: 100%;
+}
+
+.wrapper {
+	text-align: center;
+  float: right;
+}
+
+#nav {
+  display: flex;
+  gap: 20px;
+  list-style-type: none;
+}
+#nav-toggle {
+  display: none;
+  background-color: black;
+  color: white;
+  border: none;
+}
+#nav.active {
+  display: flex;
+}
+
+/*form general*/
+.form {
+  margin: 5px auto;
+	margin: 100px 50px;
+	padding: 10px 30px 35px;
+	display: block;
+	width: 450px;
+  height: 500px;
+  border-radius: 20px;
+	background-color: #DEDCDC;
+  float: right;
+}
+
+.form h2 {
+	color: #050504;
+  font-size: 40px;
+	margin: 10px 0 20px 0;
+}
+.form input, .form button, .form h2 {
+	font-family: 'calibri', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 100;
+}
+
+input[type="text"],
+input[type="password"] {
+	display: block;
+	background-color: #ffffff;
+	border: 1px solid #cccccc;
+	font-size: 20px;
+  height: 40px;
+  padding: 4px 6px;
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
+
+
+
+.input-std {
+	width: 95.5%;
+}
+
+.input-half {
+	width: 45.9%;
+	float: left;
+}
+
+.input-quarter {
+	width: 21%;
+	float: left;
+}
+
+.btn-submit {
+	width: 100%;
+	font-size: 30px;
+	padding: 11px 19px;
+	border-radius: 6px;
+	border: 2px solid #cccccc;
+	cursor: pointer;
+  background-color: #264B63;
+	color: #ffffff;
+}
+
+input#search-bar{
+  margin: 10px;
+  width: 100%;
+  height: 40px;
+  padding: 0 20px;
+  font-size: 1rem;
+  border: 1px solid #D0CFCE;
+  outline: none;
+  &:focus{
+    border: 1px solid #008ABF;
+    transition: 0.35s ease;
+    color: #008ABF;
+    &::-webkit-input-placeholder{
+      transition: opacity 0.45s ease; 
+  	  opacity: 0;
+     }
+    &::-moz-placeholder {
+      transition: opacity 0.45s ease; 
+  	  opacity: 0;
+     }
+    &:-ms-placeholder {
+     transition: opacity 0.45s ease; 
+  	 opacity: 0;
+     }    
+   }
+ }
+
+.search-icon{
+  position: relative;
+  float: right;
+  width: 75px;
+  height: 75px;
+  top: -72px;
+  right: -45px;
+}
+
+
+nav {
+  background-color:#3C6E71;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  font-family: var(--nav);
+  font-size: var(--nav-text);
+}
+nav a {
+ text-decoration: none;
+ color:var(--light-color);
+}
+#nav {
+  display: flex;
+  gap: 50px;
+  list-style-type: none;
+}
+#nav-toggle {
+  display: none;
+  background-color: var(--dark-color);
+  color: var(--light-color);
+  border: none;
+}
+#nav.active {
+  display: flex;
+}
+
+.header-aboutus {
+  background-image: url(../images/Untitled-1.jpg); 
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+}
+
+/* mobile media  -  480px or less */
+/* max-width: 480px is the same as saying 
+if width is less than 480px, run this css */
+@media screen and (max-width: 360px) {
+  body {
+    background: url(../images/Rectangle\ 50.jpg) no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: 20px;
+    contain: content; 
+  }
+  .container {
+    background-position: top center;
+    background-attachment: fixed;
+    padding: 0px, 100px;
+    background-size: cover;
+    contain: content;
+  }
+  
+  .search-container{
+    width: 30px;
+    display: block;
+    margin: 5px auto;
+    margin-right: 100px;
+    
+  }
+  html {
+    width: 100%;
+    font: 'calibri';
+    font-weight: 50;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  body {
+    width: 50%;
+    margin: 0;
+  }
+  
+  .logo-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: auto;
+    width: 30px;
+    range: left;
+  }
+  .logo-container img {
+    max-width: 30%;
+  }
+  
+  .wrapper {
+    text-align: center;
+    float: right;
+  }
+  
+  /*form general*/
+  .form {
+    margin: 5px auto;
+    margin: auto;
+    padding: 10px 30px 35px;
+    display: block;
+    width: 200px;
+    height: 300px;
+    border-radius: 20px;
+    background-color: #DEDCDC;
+    float: center;
+  }
+  
+  .form h2 {
+    color: #050504;
+    font-size: 20px;
+    margin: 10px 0 10px 0;
+  }
+  .form input, .form button, .form h2 {
+    font-family: 'calibri', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 50;
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    display: block;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    font-size: 10px;
+    height: 20px;
+    padding: 4px 6px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  
+  
+  .input-std {
+    width: 95.5%;
+  }
+  
+  .input-half {
+    width: 45.9%;
+    float: left;
+  }
+  
+  .input-quarter {
+    width: 21%;
+    float: left;
+  }
+  
+  .btn-submit {
+    width: 50%;
+    font-size: 10px;
+    padding: 5px 10px;
+    border-radius: 6px;
+    border: 2px solid #cccccc;
+    cursor: pointer;
+    background-color: #264B63;
+    color: #ffffff;
+  }
+  
+  input#search-bar{
+    margin: 10px;
+    width: 50%;
+    height: 20px;
+    padding: 0 0px;
+    font-size: 1rem;
+    border: 1px solid #D0CFCE;
+    outline: none;
+    &:focus{
+      border: 1px solid #008ABF;
+      transition: 0.35s ease;
+      color: #008ABF;
+      &::-webkit-input-placeholder{
+        transition: opacity 0.45s ease; 
+        opacity: 0;
+       }
+      &::-moz-placeholder {
+        transition: opacity 0.45s ease; 
+        opacity: 0;
+       }
+      &:-ms-placeholder {
+       transition: opacity 0.45s ease; 
+       opacity: 0;
+       }    
+     }
+   }
+  
+  .search-icon{
+    position: relative;
+    float: right;
+    width: 30px;
+    height: 30px;
+    top: -42px;
+    right: -25px;
+  }
+  
+  
+  nav {
+    background-color:#3C6E71;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    font-family: var(--nav);
+    font-size: var(--nav-text);
+  }
+  nav a {
+   text-decoration: none;
+   color:var(--light-color);
+  }
+#nav-toggle {
+    display: block;
+}
+#nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 10px;
+    right: 0px;
+    background-color: black;
+    color: white;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.header-aboutus {
+    background-image: url(../images/Untitled-1.jpg); 
+    background-size: cover;
+    background-position: center;
+    height: 150px;
+  }
+}
+
+
+
+
